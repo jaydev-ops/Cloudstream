@@ -1,17 +1,15 @@
- ## CloudStream
+ # CloudStream
 > ⚠️ This project operates in a legal gray area and is intended for educational purposes only.
 
 A modular streaming engine built with Kotlin Multiplatform, designed around a plugin-based architecture and dynamic content pipelines.
 
-# Overview
+## Overview
 
 CloudStream is not just a streaming app.
 
 It is an exploration of how streaming platforms can be built as extensible systems, where content sources, extraction logic, and playback are decoupled into modular components.
 
-⸻
-
-# Preview
+## Preview
 
 Home Experience
 ![Home](assets/home.png)
@@ -25,7 +23,7 @@ Repositories and break point
 Architecture and Mental Model
 ![MindMap](assets/mindmap.png)
 
-# Features
+## Features
 	•	Dynamic home screen with categorized content
 	•	Real-time search (search-as-you-type)
 	•	Favorites system with persistent storage
@@ -41,31 +39,31 @@ CloudStream is built as a modular system, not a monolithic app.
 Core Flow
 User → Repository → Plugin → Extraction → Playable Stream → Video Player
 
-# Plugin System
+## Plugin System
 	•	Each content source is isolated
 	•	Plugins define their own extraction logic
 	•	Easily extendable without touching core code
 
-# Repository System
+## Repository System
 	•	Dynamic plugin distribution
 	•	Runtime import support
 	•	Decouples content sources from application
 
-# Extraction Pipeline
+## Extraction Pipeline
 	•	Converts content pages into playable streams
 	•	Handles multiple hosting providers
 	•	Built for flexibility and resilience
 
-# Playback Layer
+## Playback Layer
 	•	Desktop implementation using VLCJ
 	•	Embedded video playback inside Compose UI
 
-  # Project Structure
+  ## Project Structure
   shared/
  ├── commonMain/     → Core logic (plugins, extraction, repositories)
  └── desktopMain/    → UI + VLCJ playback
 
-  # Development Journey
+  ## Development Journey
 
 This project was built through multiple iterations and architectural pivots:
 	•	Started as Android-first approach
@@ -75,7 +73,7 @@ This project was built through multiple iterations and architectural pivots:
 	•	Resolved Gradle + KMP dependency conflicts
 	•	Simplified platform targets to focus on core system
 
-# Platform Strategy
+## Platform Strategy
 	•	Desktop → Stable ✅
 	•	Android → Planned
 	•	iOS → Temporarily disabled
@@ -83,20 +81,20 @@ This project was built through multiple iterations and architectural pivots:
 Reason:
 Focus was placed on stabilizing the core system before expanding platform support.
 
-# -> Running the Project
+## -> Running the Project
 git clone https://github.com/jaydev-ops/cloudstream.git
 cd cloudstream
 ./gradlew run
 
-# Notes
+## Notes
 	•	Includes a mock plugin used for testing the architecture
 	•	API keys have been removed for security
 	•	Built for learning, experimentation, and system design
 
-  # Key Takeaway
+  ## Key Takeaway
 This project is not about streaming.
 It is about:
 Designing systems that are modular, extensible, and adaptable.
 
-# License
+## License
 This project is licensed under the terms of the MIT License.
